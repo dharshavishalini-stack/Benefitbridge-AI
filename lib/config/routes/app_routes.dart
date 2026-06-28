@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_strings.dart';
+import '../../screens/authentication/forgot_password_screen.dart';
+import '../../screens/authentication/login_screen.dart';
+import '../../screens/authentication/register_screen.dart';
 import '../../screens/onboarding/onboarding_screen.dart';
 import '../../screens/splash/splash_screen.dart';
 import '../../widgets/route_placeholder.dart';
@@ -15,18 +18,10 @@ abstract final class AppRoutes {
   static Map<String, WidgetBuilder> get routes => {
         RouteNames.splash: (_) => const SplashScreen(),
         RouteNames.onboarding: (_) => const OnboardingScreen(),
-        RouteNames.authentication: (_) => const RoutePlaceholder(
-              title: AppStrings.routeLogin,
-            ),
-        RouteNames.login: (_) => const RoutePlaceholder(
-              title: AppStrings.routeLogin,
-            ),
-        RouteNames.register: (_) => const RoutePlaceholder(
-              title: AppStrings.routeRegister,
-            ),
-        RouteNames.forgotPassword: (_) => const RoutePlaceholder(
-              title: AppStrings.routeForgotPassword,
-            ),
+        RouteNames.authentication: (_) => const LoginScreen(),
+        RouteNames.login: (_) => const LoginScreen(),
+        RouteNames.register: (_) => const RegisterScreen(),
+        RouteNames.forgotPassword: (_) => const ForgotPasswordScreen(),
         RouteNames.home: (_) => const RoutePlaceholder(
               title: AppStrings.routeHome,
             ),
