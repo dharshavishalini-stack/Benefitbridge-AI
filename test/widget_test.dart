@@ -8,6 +8,10 @@ void main() {
   ) async {
     await tester.pumpWidget(const BenefitBridgeApp());
 
-    expect(find.text('${AppStrings.routeSplash} — Coming Soon'), findsOneWidget);
+    expect(find.text(AppStrings.appName), findsOneWidget);
+    expect(
+      find.text('Bridging Citizens to Government Benefits'),
+      findsOneWidget,
+    );
   });
 }
