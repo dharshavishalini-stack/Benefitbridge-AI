@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_strings.dart';
+import '../../screens/onboarding/onboarding_screen.dart';
 import '../../screens/splash/splash_screen.dart';
 import '../../widgets/route_placeholder.dart';
 import 'route_names.dart';
@@ -13,8 +14,9 @@ abstract final class AppRoutes {
   /// Returns the complete named route map for [MaterialApp.routes].
   static Map<String, WidgetBuilder> get routes => {
         RouteNames.splash: (_) => const SplashScreen(),
-        RouteNames.onboarding: (_) => const RoutePlaceholder(
-              title: AppStrings.routeOnboarding,
+        RouteNames.onboarding: (_) => const OnboardingScreen(),
+        RouteNames.authentication: (_) => const RoutePlaceholder(
+              title: AppStrings.routeLogin,
             ),
         RouteNames.login: (_) => const RoutePlaceholder(
               title: AppStrings.routeLogin,
